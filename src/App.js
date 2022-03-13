@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">React App</header>
       <ul className="exe-links">
         <li>
-          <Link to={"/useState"}>useState</Link> 
+          <Link to={"/useState"}>useState</Link>
         </li>
         <li>
           <Link to={"/useEffect"}>useEffect</Link>
