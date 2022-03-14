@@ -22,9 +22,6 @@ const ExampleFive = () => {
     }
   };
 
-  //   useEffect(() => {
-  //     checkPwd();
-  //   }, [secondPwd]);
   return (
     <div>
       <h3>Example 5. Disable Submit Button</h3>
@@ -51,14 +48,7 @@ const ExampleFive = () => {
             width: "400px",
           }}
         >
-          <TextField
-            fullWidth
-            id="password"
-            label="Enter password"
-            variant="filled"
-            value={secondPwd}
-            onChange={checkPwd}
-          />
+          <TextField fullWidth id="password" label="Enter password" variant="filled" value={secondPwd} onChange={checkPwd} />
         </Box>
         <Box
           sx={{

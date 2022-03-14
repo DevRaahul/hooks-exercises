@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import UseEffectHook from "./components/UseEffectHook";
-import UseStateHook from "./components/UseStateHook";
+import UseContextHook from "./pages/UseContextHook";
+import UseEffectHook from "./pages/UseEffectHook";
+import UseStateHook from "./pages/UseStateHook";
 import LayoutComponent from "./pages/LayoutComponent";
 const AppRoute = () => {
   return (
@@ -10,6 +11,7 @@ const AppRoute = () => {
         <Routes>
           <Route path="/useState" element={<UseStateHook />} />
           <Route path="/useEffect" element={<UseEffectHook />} />
+          <Route path="/useContext" element={<UseContextHook />} />
         </Routes>
       </LayoutComponent>
     </>

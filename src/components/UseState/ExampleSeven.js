@@ -1,31 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Component.css";
 
-const ExampleSeven = ({ productList, cartList, addToCart }) => {
-  const updateCart = (data) => {
-    addToCart(data);
+const ExampleSeven = ({ productList, dummy }) => {
+  const [cartList, setCartList] = useState([]);
+
+  const addTocart = (prod) => {
+    setCartList([...cartList, prod]);
   };
 
   return (
     <div>
       <h3>Example 7. Add to Cart</h3>
-      <div className="code-sample">
+      <div className="code-sample container">
         <ul>
-          {productList?.map((data) => {
+          {productList.map((prod) => {
             return (
-              <li key={data.id}>
-                {data.name} <button onClick={updateCart(data)}>Add to cart</button>
+              <li key={prod.id}>
+                {prod.name}{" "}
+                <button
+                  onClick={() => {
+                    addTocart(prod);
+                  }}
+                >
+                  Add to cart
+                </button>
               </li>
             );
           })}
         </ul>
-      </div>
-      <h3>Cart</h3>
-      <div className="code-sample">
         <ul>
-          {cartList?.map((data) => (
-            <li key={data.id}>{data.name}</li>
-          ))}
+          <li>
+            <h3>Cart</h3>
+          </li>
+          {cartList?.map((data, index) => {
+            return <li key={index}>{data.name}</li>;
+          })}
         </ul>
       </div>
     </div>
