@@ -16,3 +16,9 @@
 .exe-links > li {
   color: #000;
 }
+
+ul.exe-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
